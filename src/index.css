@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-teal-dark: #004D44;
+    --brand-teal-deep: #006055;
+    --brand-teal: #00A896;
+    --brand-teal-light: #02B8A6;
+    --brand-teal-bright: #2DD4BF;
+    --brand-teal-subtle: #E6FAF7;
+    --brand-teal-mist: #F0FDFB;
+    --brand-yellow: #FACC15;
+    --brand-yellow-hover: #EAB308;
+    --brand-yellow-light: #FEF9C3;
+    --brand-yellow-subtle: #FEFCE8;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #0F2F2C;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  /* Custom smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F0FDFB;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #00A896;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #008375;
+  }
+}
+
+/* Custom Teal Brand Background & Text Utilities */
+.bg-teal-brand {
+  background-color: #00A896;
+}
+.bg-teal-deep {
+  background-color: #005F55;
+}
+.bg-teal-dark {
+  background-color: #00473F;
+}
+.bg-teal-subtle {
+  background-color: #E6FAF7;
+}
+.bg-teal-mist {
+  background-color: #F0FDFB;
+}
+
+.text-teal-brand {
+  color: #00A896;
+}
+.text-teal-deep {
+  color: #006D62;
+}
+.text-teal-bright {
+  color: #2DD4BF;
+}
+
+.border-teal-brand {
+  border-color: #00A896;
+}
+.border-teal-subtle {
+  border-color: #CCFBF1;
+}
+
+/* Teal Gradient matching the user uploaded reference */
+.bg-teal-gradient {
+  background: linear-gradient(135deg, #008C7E 0%, #00A896 50%, #007A6E 100%);
+}
+
+.bg-teal-hero-gradient {
+  background: radial-gradient(circle at 80% 20%, #02B8A6 0%, #008A7C 45%, #00564D 100%);
+}
+
+/* Floating animation utilities */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Organic curve backdrop similar to user image */
+.curve-overlay {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+
